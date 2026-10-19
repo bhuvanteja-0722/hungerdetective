@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#f8f3ea" />
+    <meta name="description" content="A 45-second educational GLP-1 quiz from Steer, built around a familiar Indian 4 PM hunger moment." />
+    <title>The 4 PM Hunger Detective | Steer</title>
+    <link rel="icon" href="https://steer.in/favicon.ico" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar" aria-label="Steer quiz header">
+        <a class="brand" href="/" aria-label="Steer home">
+          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span>steer</span>
+        </a>
+        <div class="topbar-right">
+          <span class="trust-chip"><span class="trust-dot" aria-hidden="true"></span> No login · no judgement</span>
+          <button class="language-toggle" type="button" id="languageToggle" aria-pressed="false">EN <span aria-hidden="true">/</span> हिं</button>
+        </div>
+      </header>
+
+      <main class="app-layout">
+        <section class="story-panel" aria-labelledby="story-title">
+          <div class="eyebrow"><span class="eyebrow-line"></span> THE 4 PM CHECK-IN</div>
+          <h1 id="story-title">Your hunger is back at <em>4 PM.</em> Which clue explains it?</h1>
+          <p class="story-intro">A tiny food mystery about your real day. Take the 45-second check and leave with a better question for a doctor.</p>
+
+          <div class="scene-stage" aria-label="Original 3D illustration of biryani, dosa, idli, vada, chai and samosa" role="img">
+            <div class="scene-glow"></div>
+            <div class="orbit orbit-a"></div>
+            <div class="orbit orbit-b"></div>
+            <img class="hero-food-art" src="/assets/feast.svg" alt="A playful 3D spread of Indian foods including biryani, dosa, idli, vada, chai and samosa" />
+            <span class="food-label label-samosa">samosa break</span>
+            <span class="food-label label-chai">chai + biscuit</span>
+            <span class="food-label label-biryani">biryani nights</span>
+            <div class="scene-caption"><span class="caption-pulse"></span><span id="sceneCaption">Real food. Real routines. Start with what feels familiar.</span></div>
+          </div>
+
+          <div class="food-story-rail" aria-label="Regional food moments">
+            <article class="food-story-card food-story-south">
+              <img src="/assets/south-breakfast.svg" alt="3D South Indian breakfast with dosa, idli, vada, sambar and chutney" />
+              <div><span class="story-card-kicker">SOUTH INDIA</span><strong>dosa · idli · vada</strong><small>Breakfast can be a whole mood.</small></div>
+            </article>
+            <article class="food-story-card food-story-biryani">
+              <img src="/assets/biryani.svg" alt="3D biryani in a copper handi with raita and lemon" />
+              <div><span class="story-card-kicker">THE LONG DAY</span><strong>biryani · raita · mint</strong><small>Real routines deserve real context.</small></div>
+            </article>
+          </div>
+
+          <div class="story-footer">
+            <span class="micro-icon" aria-hidden="true">✦</span>
+            <span>Education, not diagnosis. Your answers stay on this screen.</span>
+          </div>
+        </section>
+
+        <section class="quiz-panel" aria-labelledby="quiz-title">
+          <div class="quiz-card" id="quizCard">
+            <div class="card-topline">
+              <div class="progress-meta"><span id="progressStep">01</span><span class="progress-slash" id="progressSlash">/</span><span id="progressTotal">03</span></div>
+              <div class="progress-label" id="progressLabel">YOUR 4 PM MOMENT</div>
+              <button class="restart-button" type="button" id="restartButton" aria-label="Restart quiz">Restart</button>
+            </div>
+            <div class="progress-track" aria-hidden="true"><span id="progressBar"></span></div>
+            <div id="quizContent" aria-live="polite"></div>
+          </div>
+          <div class="card-footnote"><span class="footnote-icon" aria-hidden="true">↗</span> Built for curious humans, not perfect answers.</div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <span>STEER · DOCTOR-LED METABOLIC HEALTH</span>
+        <span class="footer-separator" aria-hidden="true">·</span>
+        <span>Made for Indian bodies, routines and real life</span>
+      </footer>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="/app.js" defer></script>
+  </body>
+</html>
